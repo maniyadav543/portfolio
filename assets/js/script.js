@@ -71,10 +71,10 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["frontend development", "backend development", "web designing", "android development", "web development"],
+    strings: ["soft-skills Trainer", "English Language Trainer", "Personality Development trainer", "Bussiness Coach", "Spiritual Coach", "Faculty Development Program", "Student Development Program", "Career Development Program", "Motivational Speaker"],
     loop: true,
-    typeSpeed: 50,
-    backSpeed: 25,
+    typeSpeed: 60,
+    backSpeed: 15,
     backDelay: 500,
 });
 // <!-- typed js effect ends -->

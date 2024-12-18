@@ -1,5 +1,4 @@
-$(document).ready(function () {
-
+document.addEventListener("DOMContentLoaded", () => {
     $('#menu').click(function () {
         $(this).toggleClass('fa-times');
         $('.navbar').toggleClass('nav-toggle');
@@ -15,123 +14,74 @@ $(document).ready(function () {
             document.querySelector('#scroll-top').classList.remove('active');
         }
     });
-});
 
-document.addEventListener('visibilitychange',
-    function () {
+    document.addEventListener('visibilitychange', function () {
         if (document.visibilityState === "visible") {
             document.title = "Projects | Portfolio Jigar Sable";
             $("#favicon").attr("href", "/assets/images/favicon.png");
-        }
-        else {
+        } else {
             document.title = "Come Back To Portfolio";
             $("#favicon").attr("href", "/assets/images/favhand.png");
         }
     });
 
-
-// fetch projects start
-function getProjects() {
-    return fetch("projects.json")
-        .then(response => response.json())
-        .then(data => {
-            return data
-        });
-}
-
-
-function showProjects(projects) {
-    let projectsContainer = document.querySelector(".work .box-container");
-    let projectsHTML = "";
-    projects.forEach(project => {
-        projectsHTML += `
-        <div class="grid-item ${project.category}">
-        <div class="box tilt" style="width: 380px; margin: 1rem">
-      <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
-      <div class="content">
-        <div class="tag">
-        <h3>${project.name}</h3>
-        </div>
-        <div class="desc">
-          <p>${project.desc}</p>
-          <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>`
-    });
-    projectsContainer.innerHTML = projectsHTML;
-
-    // vanilla tilt.js
-    // VanillaTilt.init(document.querySelectorAll(".tilt"), {
-    //     max: 20,
-    // });
-    // // vanilla tilt.js  
-
-    // /* ===== SCROLL REVEAL ANIMATION ===== */
-    // const srtop = ScrollReveal({
-    //     origin: 'bottom',
-    //     distance: '80px',
-    //     duration: 1000,
-    //     reset: true
-    // });
-
-    // /* SCROLL PROJECTS */
-    // srtop.reveal('.work .box', { interval: 200 });
-
-    // isotope filter products
-    var $grid = $('.box-container').isotope({
-        itemSelector: '.grid-item',
-        layoutMode: 'fitRows',
-        masonry: {
-            columnWidth: 200
+    // Fetch and display projects
+    async function getProjects() {
+        try {
+            const response = await fetch("projects.json");
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error("Error fetching projects:", error);
+            throw error;
         }
-    });
+    }
 
-    // filter items on button click
-    $('.button-group').on('click', 'button', function () {
-        $('.button-group').find('.is-checked').removeClass('is-checked');
-        $(this).addClass('is-checked');
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({ filter: filterValue });
-    });
-}
+    function showProjects(projects) {
+        const projectsContainer = document.querySelector(".work .box-container");
+        let projectsHTML = "";
 
-getProjects().then(data => {
-    showProjects(data);
-})
-// fetch projects end
+        projects.forEach(project => {
+            const projectImagePath = `./assets/images/projects/${project.image}.png`;
+            projectsHTML += `
+                <div class="grid-item ${project.category}">
+                    <div class="box tilt" style="width: 380px; margin: 1rem">
+                        <img draggable="false" src="${projectImagePath}" alt="${project.name}" />
+                        <div class="content">
+                            <div class="tag">
+                                <h3>${project.name}</h3>
+                            </div>
+                            <div class="desc">
+                                <p>${project.desc}</p>
+                                <div class="btns">
+                                    <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+                                    <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+        });
 
-// Start of Tawk.to Live Chat
-var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-(function () {
-    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/60df10bf7f4b000ac03ab6a8/1f9jlirg6';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
-})();
-// End of Tawk.to Live Chat
+        projectsContainer.innerHTML = projectsHTML;
 
-// disable developer mode
-document.onkeydown = function (e) {
-    if (e.keyCode == 123) {
-        return false;
+        // Initialize tilt.js
+        VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 20 });
+
+        // Isotope filter setup
+        const $grid = $('.box-container').isotope({
+            itemSelector: '.grid-item',
+            layoutMode: 'fitRows',
+            masonry: { columnWidth: 200 }
+        });
+
+        $('.button-group').on('click', 'button', function () {
+            $('.button-group').find('.is-checked').removeClass('is-checked');
+            $(this).addClass('is-checked');
+            const filterValue = $(this).attr('data-filter');
+            $grid.isotope({ filter: filterValue });
+        });
     }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-        return false;
-    }
-}
+
+    getProjects().then(showProjects);
+});
