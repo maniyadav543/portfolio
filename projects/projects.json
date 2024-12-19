@@ -1,28 +1,19 @@
 [
   {
       "name": "AVNIET",
-      "desc": "Full-Stack Instagram clone built using MERN stack and realtime chat with the help of socket.iO",
-      "image": "instagrammern",
+      "desc": " Empower students with communication, teamwork, and problem-solving skills to excel in dynamic work environments.",
+      "image": "avniet",
       "category": "mern",
       "links": {
           "view": "#",
           "code": "#"
       }
   },
-  {
-      "name": "Mallareddy University",
-      "desc": "Full-Stack Flipkart with Admin Dashboard and Paytm Payment Gateway. MERN Stack WebApp, ready to use for business.",
-      "image": "flipkartmern",
-      "category": "mern",
-      "links": {
-          "view": "https://flipkartwebs.herokuapp.com/",
-          "code": "https://github.com/jigar-sable/flipkart-mern"
-      }
-  },
+ 
   {
       "name": "CMR College",
-      "desc": "ReactJS Basic Resume Generator which will generate customized resume in few minutes on your requirements.",
-      "image": "resumegen",
+      "desc": " Foster leadership, adaptability, and interpersonal communication skills for success in professional settings.",
+      "image": "CMREC-2",
       "category": "mern",
       "links": {
           "view": "https://resumegenx.netlify.app/",
@@ -31,8 +22,8 @@
   },
   {
       "name": "Anurag University",
-      "desc": "Full-Stack project dashboard which is collection of projects built on the React library.",
-      "image": "reactprojects",
+      "desc": " Enhance critical thinking and collaboration abilities through interactive soft skills workshops.",
+      "image": "anurag",
       "category": "mern",
       "links": {
           "view": "https://reactjsprojects.herokuapp.com/",
@@ -41,22 +32,103 @@
   },
   {
       "name": "BVRIET",
-      "desc": "Full-Stack Flipkart Clone Using LAMP Stack. With all major features and OTP authentication and Cashfree payment gateway.",
-      "image": "flipkartphp",
+      "desc": " Cultivate effective communication and conflict resolution techniques to prepare students for the global workforce.",
+      "image": "bviret",
       "category": "php",
       "links": {
           "view": "https://flipkartphpclone.000webhostapp.com/",
           "code": "https://github.com/jigar-sable/flipkart-php"
       }
   },
+
   {
-      "name": "TSS",
-      "desc": "The best Weather App with some enhanced features of stock market which will provide realtime information about stocks in your city.",
-      "image": "weatherapp",
-      "category": "vanilla",
-      "links": {
-          "view": "https://weatherandstocks.herokuapp.com/",
-          "code": "https://github.com/jigar-sable/Weather-Stock-App"
-      }
-  }
+    "name": "CBIET",
+    "desc": " Build strong emotional intelligence and presentation skills to help students stand out in their careers.",
+    "image": "cb",
+    "category": "mern",
+    "links": {
+        "view": "https://reactjsprojects.herokuapp.com/",
+        "code": "https://github.com/jigar-sable/React-Projects"
+    }
+},
+
+{
+    "name": "KRR AND KSR clg Guntur",
+    "desc": " Strengthen students' teamwork and leadership abilities through real-world soft skills training.",
+    "image": "kkr & Ksr",
+    "category": "mern",
+    "links": {
+        "view": "https://reactjsprojects.herokuapp.com/",
+        "code": "https://github.com/jigar-sable/React-Projects"
+    }
+},
+
+{
+    "name": "Shreyas Engineering College",
+    "desc": "Enhance students' interpersonal and leadership skills to prepare them for challenges in the professional world.",
+    "image": "shreya",
+    "category": "mern",
+    "links": {
+        "view": "https://reactjsprojects.herokuapp.com/",
+        "code": "https://github.com/jigar-sable/React-Projects"
+    }
+},
+
+{
+    "name": "TKR",
+    "desc": "Develop problem-solving, negotiation, and time management skills to help students thrive professionally.",
+    "image": "tkr",
+    "category": "mern",
+    "links": {
+        "view": "https://reactjsprojects.herokuapp.com/",
+        "code": "https://github.com/jigar-sable/React-Projects"
+    }
+},
+
+{
+    "name": "QIS Engineering College",
+    "desc": "Develop teamwork, leadership, and communication skills to help students excel in both academic and professional environments.",
+    "image": "qis",
+    "category": "mern",
+    "links": {
+        "view": "https://reactjsprojects.herokuapp.com/",
+        "code": "https://github.com/jigar-sable/React-Projects"
+    }
+},
+
+{
+    "name": "Raja Rambabu Engineering College",
+    "desc": "Equip students with the tools for effective networking, decision-making, and public speaking.",
+    "image": "raja",
+    "category": "mern",
+    "links": {
+        "view": "https://reactjsprojects.herokuapp.com/",
+        "code": "https://github.com/jigar-sable/React-Projects"
+    }
+},
+
+{
+    "name": "Adarsh Institute Of Technology & Research Center",
+    "desc": " Focus on building communication, empathy, and adaptability for students to succeed in diverse fields.",
+    "image": "addi",
+    "category": "mern",
+    "links": {
+        "view": "https://reactjsprojects.herokuapp.com/",
+        "code": "https://github.com/jigar-sable/React-Projects"
+    }
+},
+
+{
+    "name": "GVP group of institutions vizag",
+    "desc": " Focus on building communication, empathy, and adaptability for students to succeed in diverse fields.",
+    "image": "gvp",
+    "category": "mern",
+    "links": {
+        "view": "https://reactjsprojects.herokuapp.com/",
+        "code": "https://github.com/jigar-sable/React-Projects"
+    }
+}
+
+ 
+  
 ]

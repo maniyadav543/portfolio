@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let projectsHTML = "";
 
         projects.forEach(project => {
-            const projectImagePath = `./assets/images/projects/${project.image}.png`;
+            const projectImagePath = `../assets/images/projects/${project.image}.png`;
             projectsHTML += `
                 <div class="grid-item ${project.category}">
                     <div class="box tilt" style="width: 380px; margin: 1rem">
